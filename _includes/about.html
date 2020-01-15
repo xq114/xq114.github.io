@@ -1,0 +1,60 @@
+<div class="user-details">
+  <h1>About Me</h1>
+  <p>{{ site.user_description }}</p>
+</div>
+<div class="user">
+  <div class="tech">
+    <h2>Programming</h2>
+    <p>Familiar with Python, C/C++, worked with Linux Shell, JavaScript and MATLAB;<br>
+      Interested in Scientific Computing and Desktop Programming (with Qt Lib, etc)</p>
+  </div>
+  <div class="tech">
+    <h2>Physics</h2>
+    <p>Interested in <strong>Quantum Computing</strong>, Quantum Information and Condensed Matter Physics, along with
+      some
+      other fields such as Optics and Machine Learning</p>
+  </div>
+  <!-- <div class="tech">
+    <h2>Projects</h2>
+    <p>A Desktop Game (as a course project);<br>
+      MCM/ICM 2020</p>
+  </div> -->
+</div>
+<div class="career gray-section">
+  <h1>My Career</h1>
+  <div id="vertical-timeline" class="vertical-container light-timeline center-orientation">
+    {% for career in site.data.careers %}
+    {% assign loopindex = forloop.index | modulo: 2 %}
+    <div class="vertical-timeline-block">
+      <div
+        class="vertical-timeline-icon {% if career.present ==  true %} navy-bg-present {% else %} navy-bg {% endif %} wow rotateIn">
+        <i class="fa {{ career.icon }}"></i>
+      </div>
+      <div
+        class="vertical-timeline-content wow {% if loopindex == 1 %} rotateInUpRight {% else %} rotateInUpLeft {% endif %}">
+        <h2><span data-i18n="career.{{ career.name.i18n }}">{{ career.name.detail }}</span></h2>
+        <p><span data-i18n="career.{{ career.desc.i18n }}">{{ career.desc.detail }} </span></p>
+        <span class="vertical-date"><span data-i18n="career.{{ career.date.i18n }}"> {{ career.date.detail }} </span>
+          <br /> <span class="detail" data-i18n="career.{{ career.job.i18n }}">{{ career.job.detail }}</span> </span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<div class="notes wow">
+  <h1>My Notes</h1>
+  <ul>
+    <li>Note on <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.70.1895" target="_blank"
+        rel="noopener noreferrer">Phys. Rev. Lett. 70, 1895</a></li>
+    <li>Discourse Note on Renormalization Group</li>
+    <li>Discourse on Laser Cooling of Atoms</li>
+    <li>Discourse on Linear Optics Quantum Computing</li>
+  </ul>
+</div>
+<div class="research">
+  <h1>My Research</h1>
+  <p>--blank--</p>
+</div>
+<div id="return-top" class="back-top" onclick="scrolltotop()">
+  <i class="fa fa-lg fa-chevron-circle-up fa-4x" id="img"></i>
+</div>

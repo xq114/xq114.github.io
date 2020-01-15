@@ -1,0 +1,20 @@
+- name:
+    detail: Peking University
+  desc:
+    detail: Undergraduate
+  date:
+    detail: Sept. 2018
+  job:
+    detail: Student
+  icon: fa-plus-square
+  present: true
+
+- name:
+    detail: Yali High School
+  desc:
+    detail: Student, Physics Olympiad participant
+  date:
+    detail: Sept. 2015
+  job:
+    detail: Student
+  icon: fa-plus-square
